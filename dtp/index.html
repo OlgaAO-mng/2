@@ -1041,8 +1041,12 @@ if(window.Telegram?.WebApp){
 // ─────────────────────────────────────────────────────────────────
 // INIT
 // ─────────────────────────────────────────────────────────────────
-renderHome();
+renderHome(){
+    const container = document.getElementById('app'); // или ваше название контейнера
+    container.innerHTML = `
+        <button onclick="location.href='../index.html'" style="background: var(--bg2); border: 1px solid var(--border); color: var(--muted); padding: 8px 16px; border-radius: var(--radius-sm); margin-bottom: 20px; font-size: 14px; cursor: pointer; width: 100%; text-align: left;">
+            ← Назад к курсам
+        </button>;
 </script>
 </body>
 </html>
-<button onclick="location.href='../index.html'" style="...">← Назад к курсам</button>
